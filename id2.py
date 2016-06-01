@@ -1,4 +1,7 @@
-# projecteuler.net 
+#! /usr/bin/env python3
+
+# author:   Denisov Denis
+# date:     01.06.2016
 #
 # Task (https://projecteuler.net/problem=2):
 #
@@ -9,4 +12,23 @@
 # 
 # By considering the terms in the Fibonacci sequence whose values do not exceed 4 000 000,
 # find the sum of the even-valued terms.
+
+max_value = 4000000
+
+pair = [1, 2]
+
+new = 0
+result = 2
+
+while new < max_value:
+
+    result += new
+    for i in (1, 2, 3):
+        new = pair[0] + pair[1]
+        pair[0], pair[1] = (pair[1], new)
+
+print(result)
+
+
+
 
