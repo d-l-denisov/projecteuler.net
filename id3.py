@@ -9,20 +9,18 @@
 # 
 # What is the largest prime factor of the number 600851475143 ?
 
-number = 600851475143
+number = 64
 
 prime = []
 mprime = []
 
 
 def isPrime(n, l):
-# isPrime(n, t)     function that receives number n and tuple of all prior prime numbers t.
+# isPrime(n, t)     function that receives number n and tuple of all prime numbers t that are less than n.
 #                   returns:    True if n is prime, 
 #                               False if n is not prime
-
     for i in l:
         if not (n % i): return(False)
-
     return(True)
 
 
