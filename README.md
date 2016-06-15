@@ -2,8 +2,6 @@
 #
 # Task (https://projecteuler.net/problem=7):
 #
-# By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
-# 
-# What is the 10 001st prime number?
-# 
+# The four adjacent digits in the 1000 number that have the greatest product are 9 × 9 × 8 × 9 = 5832. see 1000 filename.
+# Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
 
