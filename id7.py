@@ -12,6 +12,8 @@
 # What is the 10 001st prime number?
 # 
 
+import math
+
 number = 10001
 
 prime = []
@@ -20,10 +22,12 @@ def isPrime(n, l):
 # isPrime(n, t)     function that receives number n and tuple of all prime numbers t that are less than n.
 #                   returns:    True if n is prime, 
 #                               False if n is not prime
-    for i in l:
-        if not (n % i): return(False)
-    return(True)
 
+    s = math.ceil(math.sqrt(n))
+    for i in l:
+        if i <= s:
+            if not (n % i): return(False)
+    return(True)
 
 i = 2
 while len(prime) < number:
