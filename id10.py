@@ -16,7 +16,7 @@ import math
 import time
 number = 2000000
 
-prime = [2,]
+prime = [2, 3]
 
 def isPrime(n, l):
 # isPrime(n, t)     function that receives number n and tuple of all prime numbers t that are less than n.
@@ -29,10 +29,15 @@ def isPrime(n, l):
             if not (n % i): return(False)
     return(True)
 
-for i in range(3, number, 2):
+d = 4
+i = 5
+while i < number:
     if isPrime(i, prime):
         prime.append(i)
+    d = 2 if d>>1 == 2 else 4
+    i += d 
 #    print(i)
 
+#print(prime)
 print(sum(prime))
 
