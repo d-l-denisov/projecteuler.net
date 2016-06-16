@@ -8,8 +8,9 @@
 # The prime factors of 13195 are 5, 7, 13 and 29.
 # 
 # What is the largest prime factor of the number 600851475143 ?
+import math
 
-number = 600851475143
+number = 600851475143 
 
 prime = []
 mprime = []
@@ -19,8 +20,11 @@ def isPrime(n, l):
 # isPrime(n, t)     function that receives number n and tuple of all prime numbers t that are less than n.
 #                   returns:    True if n is prime, 
 #                               False if n is not prime
+
+    s = math.ceil(math.sqrt(n))
     for i in l:
-        if not (n % i): return(False)
+        if i <= s:
+            if not (n % i): return(False)
     return(True)
 
 
