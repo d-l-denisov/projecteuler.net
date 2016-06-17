@@ -1,3 +1,8 @@
+#! /usr/bin/env python3
+
+# author:   Denisov Denis
+# date:     17.06.2016
+#
 # projecteuler.net
 #
 # Task (https://projecteuler.net/problem=12):
@@ -22,3 +27,28 @@
 #                    
 # What is the value of the first triangle number to have over five hundred divisors?
 # 
+
+import math
+
+def isFactor(f, d):
+    if d % f == 0:
+        return True
+    return False
+
+numfactors = 500
+
+factors = [1,]
+t = 1
+i = 1
+while len(factors) < numfactors:
+    factors = []
+    t += i + 1
+    for j in range(1, int(math.sqrt(t)) + 1):
+        if isFactor(j, t):
+            factors.append(j)
+            factors.append(int(t/j))
+
+    i += 1
+
+print(t)
+
