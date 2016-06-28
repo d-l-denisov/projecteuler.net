@@ -21,12 +21,9 @@ filename = "p022_names.txt"
 total = 0
 
 for line in open(filename):
-#  print(list(map(lambda x: ord(x)-64, s)))
     line = sorted(line.replace("\"","").split(","))
     i=0
     for name in line:
         i += 1
         total += sum(list(map(lambda x: ord(x)-64, name)))*i
-#        print(total, name)
-#        input()
 print(total)
